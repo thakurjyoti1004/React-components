@@ -1,0 +1,119 @@
+/* .App {
+  padding: 10px;
+  background-color: rgb(211, 208, 208);
+} */
+.header {
+  border: rgb(212, 209, 209) 1px solid;
+  border-radius: 8px;
+  margin: 25px auto;
+  width: 600px;
+  padding: 35px;
+  text-align: center;
+  background-color: rgb(238, 237, 237);
+  height: 550px;
+}
+.list {
+  margin: auto;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-list-name {
+  display: flex;
+  justify-content: space-evenly;
+}
+.update-Input {
+  height: 30px;
+  margin: 20px 0px;
+  border: 1px solid rgb(219, 218, 218);
+  border-radius: 8px;
+  /* width: 300px; */
+  padding-left: 8px;
+  font-size: 17px;
+}
+.update-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 570px;
+}
+.secondary-action-btn {
+  height: 30px;
+  border-radius: 4px;
+  width: 67px;
+  padding: 1px;
+  color: black;
+  background-color: transparent;
+  font-size: 16px;
+}
+.delete-action-btn {
+  height: 30px;
+  border-radius: 4px;
+  width: 67px;
+  font-size: 16px;
+  padding: 1px;
+  color: white;
+  background-color: rgb(247, 86, 86);
+  border: none;
+}
+.primary-action-btn {
+  height: 30px;
+  border-radius: 4px;
+  width: 55px;
+  padding: 1px;
+  color: white;
+  background-color: rgba(12, 12, 170, 0.76);
+  margin-right: 8px;
+  font-size: 16px;
+  border: none;
+}
+
+.list-name {
+  margin: 15px;
+  justify-self: start;
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+h1 {
+  color: rgb(117, 88, 167);
+  text-align: start;
+}
+.addInput {
+  height: 50px;
+  margin: 20px 0px;
+  border: 1px solid rgb(219, 218, 218);
+  border-radius: 8px;
+  width: 500px;
+  padding-left: 8px;
+  font-size: 20px;
+}
+.addInput:focus {
+  border: 2px solid rgb(87, 87, 247);
+  outline: none;
+}
+
+.add-header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px 0px;
+  align-items: center;
+}
+.add-btn {
+  height: 50px;
+  border-radius: 8px;
+  margin-left: 15px;
+  width: 70px;
+  color: white;
+  background-color: rgb(91, 122, 179);
+  border: none;
+  font-size: 18px;
+}
+
+.button {
+  cursor: pointer;
+}
