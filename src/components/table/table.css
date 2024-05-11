@@ -1,0 +1,40 @@
+.table-div {
+  margin: 30px auto;
+  padding: 10px 20px;
+}
+table {
+  border: 1px black solid;
+  text-align: center;
+  width: 100%;
+}
+th {
+  border: 1px gray solid;
+  padding: 10px;
+}
+td {
+  border: 1px gray solid;
+  padding: 4px;
+}
+button {
+  margin: 5px;
+  width: 55px;
+  padding: 2px;
+  height: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.add-row-btn {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(67, 67, 92);
+}
+.primary-btn {
+  background-color: blue;
+}
+.secondary-btn {
+  background-color: gray;
+}
+.delete-btn {
+  background-color: red;
+}
