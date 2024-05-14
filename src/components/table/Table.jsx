@@ -30,19 +30,24 @@ const Table = () => {
     ele.rollNo = rollNo;
     setIsEditing(false);
   };
-  const addNewRow =() =>{
-    setTableData([...tableData,{name:"",standard:"",rollNo:"",id:Date.now()}]);
-  }
+  const addNewRow = () => {
+    setTableData([
+      ...tableData,
+      { name: "", standard: "", rollNo: "", id: Date.now() },
+    ]);
+  };
 
   return (
     <div className="table-div">
-      <button className="add-row-btn" onClick={addNewRow}>Add Row</button>
+      <button className="add-row-btn" onClick={addNewRow}>
+        Add Row
+      </button>
       <table>
         <tr>
-          <th>Name</th>
-          <th>Standard</th>
-          <th>Roll No.</th>
-          <th>Actions</th>
+          <th className="table-heading">Name</th>
+          <th className="table-heading">Standard</th>
+          <th className="table-heading">Roll No.</th>
+          <th className="table-heading">Actions</th>
         </tr>
         {tableData.map((ele) => {
           return (
@@ -50,6 +55,7 @@ const Table = () => {
               {isEditing && ele.id === idForEdit ? (
                 <td>
                   <input
+                    className="table-input-field"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -61,6 +67,7 @@ const Table = () => {
               {isEditing && ele.id === idForEdit ? (
                 <td>
                   <input
+                    className="table-input-field"
                     type="text"
                     value={standard}
                     onChange={(e) => setStandard(e.target.value)}
@@ -72,6 +79,7 @@ const Table = () => {
               {isEditing && ele.id === idForEdit ? (
                 <td>
                   <input
+                    className="table-input-field"
                     type="text"
                     value={rollNo}
                     onChange={(e) => setRollNo(e.target.value)}
@@ -82,13 +90,30 @@ const Table = () => {
               )}
               {isEditing && ele.id === idForEdit ? (
                 <td>
-                  <button className="primary-btn" onClick={() => handleSave(ele)}>Save</button>
-                  <button className="secondary-btn" onClick={handleOnCancel}>Cancel</button>
+                  <button
+                    className="primary-btn"
+                    onClick={() => handleSave(ele)}
+                  >
+                    Save
+                  </button>
+                  <button className="secondary-btn" onClick={handleOnCancel}>
+                    Cancel
+                  </button>
                 </td>
               ) : (
                 <td>
-                  <button className="primary-btn" onClick={() => handleNameOnEdit(ele)}>Edit</button>
-                  <button className="delete-btn" onClick={() => handleDelete(ele.id)}>Delete</button>
+                  <button
+                    className="primary-btn"
+                    onClick={() => handleNameOnEdit(ele)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="delete-btn"
+                    onClick={() => handleDelete(ele.id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               )}
             </tr>
