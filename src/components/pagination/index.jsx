@@ -5,7 +5,7 @@ import { data } from "../pagination/constant";
 
 const Pagination = () => {
   const [userData, setUserData] = useState([]);
-  const [list, setList] = useState(userData);
+  const [list, setList] = useState([]);
 
   const task = { all: "all", completed: "completed", pending: "pending" };
   const [searchText, setSearchText] = useState("");
@@ -23,25 +23,32 @@ const Pagination = () => {
   useEffect(() => {
     fetchedResponse();
   }, []);
+
   const handleDropdownValue = (e) => {
     if (list && list.length) {
+      let filteredPendingTask = [];
       if (e.target.value === task.pending) {
-        const filterPendingTask = list.filter((ele) => ele.completed === false);
-        setUserData(filterPendingTask);
+        filteredPendingTask = list.filter((ele) => ele.completed === false);
       } else if (e.target.value === task.completed) {
-        const filterCompletedTasks = list.filter(
-          (ele) => ele.completed === true
-        );
-        setUserData(filterCompletedTasks);
+        filteredPendingTask = list.filter((ele) => ele.completed === true);
       } else {
-        setUserData(list);
+        filteredPendingTask = list;
       }
+      getSearchedList(filteredPendingTask, searchText);
     }
   };
 
-  const handleSearch = (e) => {
-  
+  const getSearchedList = (list, searchText) => {
+    const value = searchText.toLowerCase();
+    const searchFiltering = list.filter((ele) => ele.title.includes(value));
+    setUserData(searchFiltering);
   };
+
+  const handleSearch = (e) => {
+    setSearchText(e.target.value);
+    getSearchedList(userData, e.target.value);
+  };
+
   return (
     <>
       <div className="searchBar-dropdown-div">
