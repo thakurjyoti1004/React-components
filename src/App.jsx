@@ -5,7 +5,7 @@ import "../src/components/table/table.css";
 import Modal from "./components/modal";
 import { useState } from "react";
 import Pagination from "./components/pagination";
-
+import CardsFilter from "../src/components/cards_filter";
 import "./app.css";
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
     setShowModal(false);
   };
 
+
   return (
     <div className="app">
       {/* <button onClick={() => setShowModal(true)}>Show modal</button>
@@ -28,7 +29,8 @@ export default function App() {
       /> */}
       {/* <Table /> */}
       {/* <ToDo/> */}
-      <Pagination/>
+      <CardsFilter/>
+      {/* <Pagination pages={5} onPageClick={onPageClick}/> */}
     </div>
   );
 }

@@ -1,0 +1,43 @@
+.main-div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 800px;
+  margin: 45px auto;
+  align-items: center;
+  text-align: center;
+}
+.card-div {
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px;
+  background-color: rgb(226, 208, 218);
+}
+.completed-status {
+  color: rgb(44, 165, 44);
+}
+.pending-status {
+  color: red;
+}
+
+.search-bar {
+  font-size: 16px;
+  height: 30px;
+  border-radius: 8px;
+  padding: 4px;
+}
+.searchBar-dropdown-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 700px;
+}
+.drop-down {
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
