@@ -1,5 +1,5 @@
 import ToDo from "./components/to_do_list/Header";
-import Table from "./components/table/Table";
+// import Table from "./components/table/Table";
 import "../src/components/to_do_list/style.css";
 import "../src/components/table/table.css";
 import Modal from "./components/modal";
@@ -7,6 +7,8 @@ import { useState } from "react";
 import Pagination from "./components/pagination";
 import CardsFilter from "../src/components/cards_filter";
 import "./app.css";
+import Table from "../src/components/table_component";
+import ReactHooks from "./components/React_hooks";
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +20,6 @@ export default function App() {
     setShowModal(false);
   };
 
-
   return (
     <div className="app">
       {/* <button onClick={() => setShowModal(true)}>Show modal</button>
@@ -29,8 +30,11 @@ export default function App() {
       /> */}
       {/* <Table /> */}
       {/* <ToDo/> */}
-      <CardsFilter/>
+      {/* <CardsFilter/> */}
       {/* <Pagination pages={5} onPageClick={onPageClick}/> */}
+      {/* <Table /> */}
+      {/* <Swiggy/> */}
+      <ReactHooks/>
     </div>
   );
 }
