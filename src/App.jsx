@@ -8,7 +8,8 @@ import Pagination from "./components/pagination";
 import CardsFilter from "../src/components/cards_filter";
 import "./app.css";
 import Table from "../src/components/table_component";
-import ReactHooks from "./components/React_hooks";
+import UseState from "./components/React_hooks/useStateHook";
+import UseEffect from "./components/React_hooks/useEffectHook";
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
@@ -34,7 +35,8 @@ export default function App() {
       {/* <Pagination pages={5} onPageClick={onPageClick}/> */}
       {/* <Table /> */}
       {/* <Swiggy/> */}
-      <ReactHooks/>
+      {/* <UseState/> */}
+      <UseEffect/>
     </div>
   );
 }
